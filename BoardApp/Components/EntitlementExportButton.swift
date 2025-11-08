@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct ExportEntitlementsButton: View {
+struct EntitlementExportButton: View {
     let app: InstalledApp
     @State private var isHovered = false
     

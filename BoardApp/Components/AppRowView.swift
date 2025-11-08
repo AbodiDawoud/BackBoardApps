@@ -9,7 +9,6 @@ struct ApplicationRowView: View {
     let app: InstalledApp
     let isSelected: Bool
     
-    @State private var isHovered = false
     
     var body: some View {
         HStack(spacing: 11) {
@@ -38,11 +37,7 @@ struct ApplicationRowView: View {
         .padding(.vertical, 8)
         .background(
             RoundedRectangle(cornerRadius: 12)
-                .fill(
-                    isSelected ?
-                        Color.gray.opacity(0.1) :
-                        (isHovered ? Color.gray.opacity(0.06) : Color.clear)
-                )
+                .fill(isSelected ? .gray.opacity(0.1) : .white.opacity(0.0001))
         )
         .overlay(alignment: .leading) {
             if isSelected {
@@ -51,19 +46,9 @@ struct ApplicationRowView: View {
                     .frame(maxWidth: 3, maxHeight: 25)
             }
         }
-        .onHover { hovering in
-            withAnimation(.easeInOut(duration: 0.15)) {
-                isHovered = hovering && !isSelected
-            }
-        }
         .animation(.easeInOut(duration: 0.2), value: isSelected)
         .contextMenu {
-            Button("Open Application") {
-                NSWorkspace.shared.openApplication(
-                    at: URL(fileURLWithPath: app.bundlePath),
-                    configuration: .init()
-                )
-            }
+            Button("Launch Application", action: app.launch)
             Button("Reveal in Finder") {
                 NSWorkspace.shared.selectFile(app.bundlePath, inFileViewerRootedAtPath: "")
             }
@@ -73,6 +58,7 @@ struct ApplicationRowView: View {
             Button("Copy Bundle Identifier") { copy(app.bundleIdentifier) }
             Button("Copy Bundle Path") { copy(app.bundlePath) }
         }
+        .onLongPressGesture(minimumDuration: 0.75, perform: app.launch)
     }
     
     func copy(_ item: String) {

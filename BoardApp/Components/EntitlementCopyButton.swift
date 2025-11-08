@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct CopyButton: View {
+struct EntitlementCopyButton: View {
     let text: String
     let value: String
     

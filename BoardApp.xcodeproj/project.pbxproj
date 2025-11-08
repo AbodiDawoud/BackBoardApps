@@ -16,9 +16,8 @@
 		BD19D6092EBD85E700191597 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD19D6012EBD85E700191597 /* SidebarView.swift */; };
 		BD19D60A2EBD85E700191597 /* DetailContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD19D5FF2EBD85E700191597 /* DetailContentView.swift */; };
 		BD399CB22EBE5228000D16E1 /* NoEntitlementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD399CB12EBE5228000D16E1 /* NoEntitlementsView.swift */; };
-		BD399CB42EBE5339000D16E1 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD399CB32EBE5339000D16E1 /* CopyButton.swift */; };
-		BD399CB62EBE7AEA000D16E1 /* RevealInFinderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD399CB52EBE7AEA000D16E1 /* RevealInFinderButton.swift */; };
-		BD399CB82EBE81C4000D16E1 /* ExportEntitlementsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD399CB72EBE81C4000D16E1 /* ExportEntitlementsButton.swift */; };
+		BD399CB42EBE5339000D16E1 /* EntitlementCopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD399CB32EBE5339000D16E1 /* EntitlementCopyButton.swift */; };
+		BD399CB82EBE81C4000D16E1 /* EntitlementExportButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD399CB72EBE81C4000D16E1 /* EntitlementExportButton.swift */; };
 		BDBDBAA92EBD8E97006DAA18 /* EmptyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBDBAA82EBD8E97006DAA18 /* EmptyDetailView.swift */; };
 		BDBDBAAD2EBD9703006DAA18 /* AppRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBDBAAC2EBD9703006DAA18 /* AppRowView.swift */; };
 /* End PBXBuildFile section */
@@ -35,9 +34,8 @@
 		BD19D6012EBD85E700191597 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		BD34D4A92EBC2FAB00FD9E83 /* BoardApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoardApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD399CB12EBE5228000D16E1 /* NoEntitlementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntitlementsView.swift; sourceTree = "<group>"; };
-		BD399CB32EBE5339000D16E1 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
-		BD399CB52EBE7AEA000D16E1 /* RevealInFinderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealInFinderButton.swift; sourceTree = "<group>"; };
-		BD399CB72EBE81C4000D16E1 /* ExportEntitlementsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportEntitlementsButton.swift; sourceTree = "<group>"; };
+		BD399CB32EBE5339000D16E1 /* EntitlementCopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitlementCopyButton.swift; sourceTree = "<group>"; };
+		BD399CB72EBE81C4000D16E1 /* EntitlementExportButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitlementExportButton.swift; sourceTree = "<group>"; };
 		BDBDBAA82EBD8E97006DAA18 /* EmptyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailView.swift; sourceTree = "<group>"; };
 		BDBDBAAC2EBD9703006DAA18 /* AppRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,9 +58,8 @@
 				BDBDBAAC2EBD9703006DAA18 /* AppRowView.swift */,
 				BDBDBAA82EBD8E97006DAA18 /* EmptyDetailView.swift */,
 				BD399CB12EBE5228000D16E1 /* NoEntitlementsView.swift */,
-				BD399CB32EBE5339000D16E1 /* CopyButton.swift */,
-				BD399CB52EBE7AEA000D16E1 /* RevealInFinderButton.swift */,
-				BD399CB72EBE81C4000D16E1 /* ExportEntitlementsButton.swift */,
+				BD399CB32EBE5339000D16E1 /* EntitlementCopyButton.swift */,
+				BD399CB72EBE81C4000D16E1 /* EntitlementExportButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -181,16 +178,15 @@
 			files = (
 				BD19D6042EBD85E700191597 /* VisualEffectBlur.swift in Sources */,
 				BD19D6052EBD85E700191597 /* AppViewModel.swift in Sources */,
-				BD399CB82EBE81C4000D16E1 /* ExportEntitlementsButton.swift in Sources */,
+				BD399CB82EBE81C4000D16E1 /* EntitlementExportButton.swift in Sources */,
 				BD19D6062EBD85E700191597 /* ContentView.swift in Sources */,
 				BD19D6072EBD85E700191597 /* App.swift in Sources */,
 				BD19D6082EBD85E700191597 /* Models.swift in Sources */,
 				BDBDBAA92EBD8E97006DAA18 /* EmptyDetailView.swift in Sources */,
 				BD19D6092EBD85E700191597 /* SidebarView.swift in Sources */,
-				BD399CB62EBE7AEA000D16E1 /* RevealInFinderButton.swift in Sources */,
 				BD399CB22EBE5228000D16E1 /* NoEntitlementsView.swift in Sources */,
 				BDBDBAAD2EBD9703006DAA18 /* AppRowView.swift in Sources */,
-				BD399CB42EBE5339000D16E1 /* CopyButton.swift in Sources */,
+				BD399CB42EBE5339000D16E1 /* EntitlementCopyButton.swift in Sources */,
 				BD19D60A2EBD85E700191597 /* DetailContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

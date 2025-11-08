@@ -24,3 +24,15 @@ extension View {
         }
     }
 }
+
+#Preview {
+    Circle()
+        .fill(.quaternary)
+        .overlay {
+            Circle()
+                .fill(Color.green.gradient)
+                .padding(3)
+        }
+        .frame(width: 16)
+        .padding(30)
+}

@@ -79,14 +79,17 @@ struct CustomTitleBar: View {
                     SourceTypeButton(systemName: "app.stack", isSelected: vm.sourceType == .all) {
                         vm.sourceType = .all
                     }
+                    .help(ApplicationSourceFilter.all.localizedDescription)
                     
                     SourceTypeButton(systemName: "apple.logo.pin.point.of.interest", isSelected: vm.sourceType == .system) {
                         vm.sourceType = .system
                     }
+                    .help(ApplicationSourceFilter.system.localizedDescription)
                     
                     SourceTypeButton(systemName: "appstore", isSelected: vm.sourceType == .user) {
                         vm.sourceType = .user
                     }
+                    .help(ApplicationSourceFilter.user.localizedDescription)
                 }
             }
             
@@ -96,11 +99,9 @@ struct CustomTitleBar: View {
                     .font(.system(size: 13))
                     .foregroundColor(.secondary)
                 
-                
-                TextField("Search apps...", text: searchTextBinding)
+                TextField("", text: searchTextBinding, prompt: Text("Search apps..."))
                     .textFieldStyle(.plain)
                     .font(.system(size: 13))
-                    .foregroundColor(.primary)
                 
                 
                 if !vm.searchQuery.isEmpty {

@@ -11,13 +11,13 @@ import Observation
 class AppViewModel {
     var installedApps: [InstalledApp] = []
     var filteredApps: [InstalledApp] {
-        queryApps(searchText: searchQuery, source: sourceType)
+        filterApps(searchText: searchQuery, source: sourceType)
     }
     var selectedApp: InstalledApp?
     var iInstalledAppsCount: Int { installedApps.count }
     
     var searchQuery: String = ""
-    var sourceType: ApplicationSourceFilter = .system
+    var sourceType: ApplicationSourceFilter = .all
     
 
     
@@ -31,7 +31,7 @@ class AppViewModel {
     private func loadInstalledApps() {
         let FBSApplicationLibrary = NSClassFromString("FBSApplicationLibrary") as! NSObject.Type
         let library = FBSApplicationLibrary.init()
-        let allInstalledApplications = (library.value(forKey: "allInstalledApplications") as! Array<NSObject>)
+        let allInstalledApplications = library.value(forKey: "allInstalledApplications") as! Array<NSObject>
         
         
         allInstalledApplications.forEach {
@@ -51,13 +51,12 @@ class AppViewModel {
                 preferenceDomain: preferenceDomain
             )
             
-            print(bundleURL.path())
             installedApps.append(app)
         }
     }
 
     
-    private func queryApps(searchText: String, source: ApplicationSourceFilter) -> [InstalledApp] {
+    private func filterApps(searchText: String, source: ApplicationSourceFilter) -> [InstalledApp] {
         var filtered: [InstalledApp] = []
         
         switch source {
