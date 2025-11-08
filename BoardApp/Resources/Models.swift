@@ -83,5 +83,3 @@ struct EntitlementItem: Identifiable {
         }
     }
 }
-
-//CFBundleGetPackageInfoInDirectory

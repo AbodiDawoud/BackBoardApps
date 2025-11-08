@@ -31,7 +31,7 @@ class AppViewModel {
     private func loadInstalledApps() {
         let FBSApplicationLibrary = NSClassFromString("FBSApplicationLibrary") as! NSObject.Type
         let library = FBSApplicationLibrary.init()
-        let allInstalledApplications = (library.value(forKey: "allInstalledApplications") as! Array<NSObject>).prefix(10)
+        let allInstalledApplications = (library.value(forKey: "allInstalledApplications") as! Array<NSObject>)
         
         
         allInstalledApplications.forEach {
